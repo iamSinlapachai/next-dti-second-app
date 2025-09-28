@@ -1,16 +1,11 @@
 //import MenuBar from "@/components/MenuBar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Kanit} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const kanit = Kanit({  
+  subsets: ["thai"],
+  weight: ["100", "200","300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -26,11 +21,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${kanit.className}`}
       >
         {/* <MenuBar></MenuBar> */}
         {children}
+        <div className="text-center font-bold text-gray-500 mt-20">
+          <hr className="w-2xl mx-auto"/>
+          Created by Sinlapachai Kaeobunrueang
+          <br />
+          Copyright &copy; 2024 All rights reserved.
+        </div>
       </body>
     </html>
   );
 }
+// creat Layout in any folder in app to apply layout to all pages in that folder and subfolders
