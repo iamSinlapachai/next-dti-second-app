@@ -1,4 +1,4 @@
-import MenuBar from "@/components/MenuBar";
+//import MenuBar from "@/components/MenuBar";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
